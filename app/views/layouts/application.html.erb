@@ -9,11 +9,15 @@
   </head>
 
   <body>
-    <%= link_to 'Go to the about page', about_path %>
-    <br>
-    <%= link_to 'Go to the home page', root_path %>
-    <br>
-    <%= link_to 'Go to the new course page', courses_new_path %>
-    <%= yield %>
+    <header><%= render 'layouts/navigation' %></header>
+    <main>
+      <div class="container">
+        <%= yield %>
+      </div>
+    </main>
+    <footer>
+      <%= render 'layouts/footer' %>
+    </footer>
   </body>
+
 </html>
