@@ -10,9 +10,11 @@
       </div>
     </div>
     <div class="row">
-      <div class="input-field col s12">
-        <%= link_to "Edit", edit_student_path(@student), class: "btn waves-effect waves-light" %>
-      </div>
+      <% if current_user == @student %>
+        <div class="input-field col s12">
+          <%= link_to "Edit", edit_student_path(@student), class: "btn waves-effect waves-light" %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

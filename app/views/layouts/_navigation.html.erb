@@ -17,11 +17,13 @@
 <nav>
   <div class="container">
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">University University</a>
+      <%= link_to "University University", root_path, class: "brand-logo" %>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="">Courses</a></li>
-        <li><a href="">Enrollments</a></li>
+        <li><%= link_to "Courses", root_path %></li>
+        <% if logged_in? %>
+          <li><%= link_to "Students", students_path %></li>
+        <% end %>
         <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Account</a></li>
       </ul>
       <ul class="sidenav" id="mobile-demo">
