@@ -15,21 +15,27 @@
             <div class="row">
               <div class="input-field col s12">
                 <%= f.text_field :name, class: "validate", id: "name", placeholder: "Enter Your Name", type: "text" %>
-                <%= f.label :name %>
+                <%= f.label :name, class: "active" %>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
                 <%= f.email_field :email, class: "validate", id: "email", type: "email", placeholder: "Please Enter in Your Email"%>
-                <%= f.label :email %>
+                <%= f.label :email, class: "active" %>
               </div>
             </div>
-<!--            <div class="row">-->
-<!--              <div class="input-field col s12">-->
-<!--                <input id="password" type="password" class="validate">-->
-<!--                <label for="password">Password</label>-->
-<!--              </div>-->
-<!--            </div>-->
+            <div class="row">
+              <div class="input-field col s12">
+                <%= f.password_field :password, class: "validate", id: "password", type: "password", placeholder: "Enter a password" %>
+                <%= f.label :password, class: "active" %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <%= f.password_field :password_confirmation, class: "validate", id: "password", type: "password", placeholder: "Confirm your password" %>
+                <%= f.label :password_confirmation, class: "active" %>
+              </div>
+            </div>
             <div class="row">
               <div class="input-field col s12">
                 <%= f.submit "Sign Up", class: "btn waves-effect waves-light" %>
